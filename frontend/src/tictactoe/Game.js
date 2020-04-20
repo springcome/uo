@@ -4,11 +4,11 @@ import Board from "./Board";
 class Game extends React.Component {
     render() {
         return (
-            <div className='game'>
-                <div className="game-board">
+            <div>
+                <div>
                     <Board />
                 </div>
-                <div className="game-info">
+                <div>
                     <div>{/* status */}</div>
                     <ol>{/* TODO */}</ol>
                 </div>
