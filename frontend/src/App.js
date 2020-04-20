@@ -1,17 +1,20 @@
 import React from 'react';
 
-function Asome({name}) {
-//	console.log(prop);
-	return <h1>It is ASome {name}</h1>
-}
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-		  <div>
-		  	<h1>Hi, Nice meet you.</h1>
-		  	<Asome
-		  		name="Rudy" />
-		  </div>
+		<div class="container-fluid">
+			<h1>Hello world</h1>
+			<div class="row">
+				<div class="col-md-2">
+					Title
+				</div>
+				<div>
+					Content
+				</div>
+			</div>
+		</div>
   );
 }
 
