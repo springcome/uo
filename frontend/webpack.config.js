@@ -1,3 +1,5 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
     // 최상위 자바스크립트 파일의 위치를 webpack에 알려야 하며 이를 entry속성에 명시한다.
     // entry 설정은 항상 프로젝트 디렉토리 내부이므로 상대경로로 사용
@@ -20,6 +22,13 @@ module.exports = {
                 }
             },
             {
+                test: /\/html$/,
+                use: [{
+                    loader: "html-loader",
+                    options: {minimize: true}
+                }]
+            },
+            {
                 // css 파일만 인식하도록 정규식 사용
                 test: /\.css$/,
                 // 정규식에 의해 매칭되는 파일은 아래 use항목에 등록된 loader를 통해 처리되도록함.
@@ -27,7 +36,10 @@ module.exports = {
             }
         ]
     },
-    // plugins: [
-    //     new HtmlWebPackPlugin()
-    // ]
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./public/index.html",
+            filename: "./index.html"
+        })
+    ]
 } 
