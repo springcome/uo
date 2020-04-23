@@ -1,12 +1,12 @@
 import React from 'react';
-import GridSystem from "./drafts/GridSystem";
+// import GridSystem from "./drafts/GridSystem";
 
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
 		<div className="container-fluid">
-			<GridSystem />
+			{/* <GridSystem /> */}
 		</div>
   );
 }
