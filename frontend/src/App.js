@@ -1,31 +1,29 @@
-import React from 'react';
+import React from "react";
+import {Container, Row, Col} from "react-grid-system";
+
+import Header from "./layout/header";
 
 class App extends React.Component {
 	constructor() {
 		super();
-
-		this.state = {
-			count: 0
-		}
-	}
-
-	add() {
-		console.log("1");
-		this.state.count++;
-	}
-
-	minus() {
-		console.log("2");
-		this.state.count--;
 	}
 
 	render() {
 		return (
-			<div>
-				<h1>The number is {this.state.count}</h1>
-				<button onClick="add">Add</button>
-				<button onClick="minus">Minus</button>
-			</div>
+			<Container>
+				<Row>
+					<Col debug>
+						<Header />
+					</Col>
+				</Row>
+				<Row>
+					<Col debug md={3}>Left</Col>
+					<Col debug>Content</Col>
+				</Row>
+				<Row>
+					<Col debug>Footer</Col>
+				</Row>
+			</Container>
 		);
 	}
 }
