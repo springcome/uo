@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col} from "react-grid-system";
+import "bootswatch/dist/flatly/bootstrap.css";
 
 import Header from "./layout/header";
 
@@ -10,20 +10,9 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<Container>
-				<Row>
-					<Col debug>
-						<Header />
-					</Col>
-				</Row>
-				<Row>
-					<Col debug md={3}>Left</Col>
-					<Col debug>Content</Col>
-				</Row>
-				<Row>
-					<Col debug>Footer</Col>
-				</Row>
-			</Container>
+			<div class="container-fluid">
+				<Header />
+			</div>
 		);
 	}
 }
